@@ -171,10 +171,27 @@ footer { position: relative; z-index: 5; padding: 2rem; border-top: 1px solid va
 @keyframes mq { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
 
 /* Modal */
-.modal-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.88); backdrop-filter:blur(12px); justify-content:center; align-items:center; padding:2rem; }
+.modal-overlay {
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background: rgba(15, 25, 15, 0.75);  /* lighter so cert is visible */
+  backdrop-filter: blur(6px);
+  justify-content:center;
+  align-items:center;
+  padding:2rem;
+}
 .modal-overlay.show { display:flex; }
 .modal-content { max-width:880px; width:100%; position:relative; animation: su .4s ease; }
-.modal-content img { width:100%; border-radius:12px; border:1px solid var(--border); box-shadow:0 30px 80px rgba(0,0,0,.6); }
+.modal-content img {
+  width:100%;
+  border-radius:12px;
+  border:1px solid #2a4a2a;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+  background:#111;
+}
+
 .modal-close { position:absolute; top:-14px; right:-14px; width:36px; height:36px; border-radius:50%; background:var(--bg-card); border:1px solid var(--border); color:var(--text); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition: all .2s; }
 .modal-close:hover { border-color: var(--accent); color: var(--accent); }
 
